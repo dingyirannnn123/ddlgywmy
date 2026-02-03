@@ -1,0 +1,791 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9ff;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* 头部样式 - 蓝紫色渐变 */
+        header {
+            background: linear-gradient(to right, #4a36b0, #3a6bce);
+            color: white;
+            padding: 2.5rem 0;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(74, 54, 176, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 30px 30px;
+            top: -50%;
+            left: -50%;
+            opacity: 0.3;
+            z-index: 0;
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .header-content h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(to right, #fff, #e6d8ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .header-content p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .table-tennis-icon {
+            color: #a991ff;
+            margin: 0 10px;
+        }
+        
+        /* 顶部导航样式 */
+        nav {
+            background: linear-gradient(to right, #4a36b0, #3a6bce);
+            box-shadow: 0 4px 12px rgba(74, 54, 176, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .nav-container a {
+            color: white;
+            text-decoration: none;
+            padding: 1.2rem 1.8rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border-bottom: 4px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .nav-container a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: 0.5s;
+        }
+        
+        .nav-container a:hover::before {
+            left: 100%;
+        }
+        
+        .nav-container a:hover, .nav-container a.active {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-bottom: 4px solid #a991ff;
+        }
+
+        /* 新增：媒体区一级总导航 */
+        .media-main-nav {
+            box-shadow: 0 4px 12px rgba(74, 54, 176, 0.1);
+            margin: 0 auto 20px;
+            max-width: 800px;
+            border-radius: 50px;
+            overflow: hidden;
+            padding: 20px;
+            position: relative;
+        }
+        .media-main-nav-container {
+            display: flex;
+            gap: 15px;
+            width: 100%;
+            justify-content: center;
+        }
+        .media-main-nav-container a {
+            color: #4a36b0;
+            text-decoration: none;
+            padding: 1rem 1.5rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+            text-align: center;
+            border-radius: 50px;
+            background: linear-gradient(135deg, #f8f5ff, #e8e4ff);
+            box-shadow: 0 4px 10px rgba(74, 54, 176, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .media-main-nav-container a:hover, .media-main-nav-container a.active {
+            background: linear-gradient(135deg, #4a36b0, #3a6bce);
+            color: white;
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(74, 54, 176, 0.3);
+        }
+
+        /* 新增：赛事板块内二级子导航（林高远/王曼昱） */
+        .player-sub-nav {
+            background: #f0ebff;
+            border-radius: 8px;
+            margin: 0 0 20px 0;
+        }
+        .player-sub-nav-container {
+            display: flex;
+            justify-content: center;
+        }
+        .player-sub-nav-container a {
+            color: #4a36b0;
+            text-decoration: none;
+            padding: 0.8rem 2rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+        .player-sub-nav-container a:hover, .player-sub-nav-container a.active {
+            border-bottom: 3px solid #6a5acd;
+            color: #3a6bce;
+        }
+        
+        /* 主内容区 */
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 50px 0;
+        }
+        
+        /* 运动员卡片样式 */
+        .athlete-card {
+            flex: 1;
+            min-width: 300px;
+            background-color: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(74, 54, 176, 0.1);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            border-top: 5px solid #4a36b0;
+        }
+        
+        .athlete-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(74, 54, 176, 0.15);
+        }
+        
+        .athlete-header {
+            padding: 2.5rem 2rem;
+            text-align: center;
+            background: linear-gradient(to bottom, #f8f5ff, #f0ebff);
+            border-bottom: 1px solid #eae2ff;
+        }
+        
+        .avatar-container {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 1.8rem;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 8px solid white;
+            box-shadow: 0 8px 20px rgba(74, 54, 176, 0.2);
+        }
+        
+        .avatar-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .athlete-name {
+            font-size: 2.2rem;
+            color: #4a36b0;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        
+        .athlete-title {
+            color: #6a5acd;
+            font-weight: 600;
+            font-size: 1.1rem;
+            background-color: rgba(169, 145, 255, 0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            display: inline-block;
+        }
+        
+        .athlete-info {
+            padding: 2rem 2.5rem;
+        }
+        
+        .info-section {
+            margin-bottom: 2rem;
+        }
+        
+        .section-title {
+            font-size: 1.5rem;
+            color: #4a36b0;
+            margin-bottom: 1.2rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 2px solid #f0ebff;
+            display: flex;
+            align-items: center;
+        }
+        
+        .section-title i {
+            margin-right: 12px;
+            color: #6a5acd;
+            background-color: #f0ebff;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .info-list {
+            list-style-type: none;
+        }
+        
+        .info-list li {
+            padding: 0.8rem 0;
+            border-bottom: 1px dashed #eae2ff;
+            display: flex;
+            transition: all 0.3s ease;
+        }
+        
+        .info-list li:hover {
+            background-color: #f8f5ff;
+            padding-left: 10px;
+            border-radius: 6px;
+        }
+        
+        .info-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .year {
+            font-weight: 700;
+            color: #6a5acd;
+            min-width: 90px;
+            background-color: #f0ebff;
+            padding: 0.2rem 0.8rem;
+            border-radius: 4px;
+            margin-right: 15px;
+            text-align: center;
+        }
+        
+        /* 媒体区样式 */
+        .media-section {
+            flex: 100%;
+            background-color: white;
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-top: 20px;
+            box-shadow: 0 8px 25px rgba(74, 54, 176, 0.1);
+            border-top: 5px solid #6a5acd;
+        }
+        
+        .dingding-record {
+            color: #4a36b0;
+            font-size: 1.1rem;
+            font-weight: 600;
+            padding: 0.8rem 1.5rem;
+            background: linear-gradient(135deg, #f8f5ff, #e8e4ff);
+            border-radius: 50px;
+            display: inline-block;
+            margin-top: 1rem;
+            box-shadow: 0 4px 15px rgba(106, 90, 205, 0.2);
+        }
+        .dingding-record i {
+            color: #6a5acd;
+            margin: 0 0.5rem;
+            font-size: 1rem;
+        }
+        
+        /* 赛事板块样式 */
+        .event-section {
+            margin-bottom: 50px;
+        }
+        .event-section:last-child {
+            margin-bottom: 0;
+        }
+        .event-title {
+            font-size: 1.8rem;
+            color: #4a36b0;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        /* 运动员子专栏样式 */
+        .player-column {
+            margin-bottom: 30px;
+        }
+        .player-column:last-child {
+            margin-bottom: 0;
+        }
+        .player-title {
+            font-size: 1.4rem;
+            color: #6a5acd;
+            margin-bottom: 1.2rem;
+            padding-left: 10px;
+            border-left: 4px solid #a991ff;
+        }
+        
+/* 媒体网格：完全保留原代码样式，无任何修改 */
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 1.8rem;
+        }
+        
+        .media-item {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 15px rgba(74, 54, 176, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #f0ebff;
+        }
+        
+        .media-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(74, 54, 176, 0.15);
+        }
+        
+        .media-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        
+        .media-item:hover .media-img {
+            transform: scale(1.05);
+        }
+        
+        .media-video-container {
+            position: relative;
+            width: 100%;
+            height: 220px;
+            overflow: hidden;
+        }
+        
+        .media-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(72, 54, 164, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+            opacity: 0.8;
+            transition: all 0.3s ease;
+        }
+        
+        .media-item:hover .video-overlay {
+            opacity: 1;
+            background-color: rgba(74, 54, 176, 0.5);
+        }
+        
+        .media-caption {
+            padding: 1.2rem;
+            background: linear-gradient(to right, #f8f5ff, #f0ebff);
+            font-size: 1rem;
+            color: #4a36b0;
+            font-weight: 600;
+        }
+        
+        /* 页脚样式 */
+        footer {
+            background: linear-gradient(135deg, #2a1b69 0%, #3a4a9e 100%);
+            color: #ddd;
+            padding: 3rem 0 2rem;
+            margin-top: 50px;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .footer-content p {
+            margin-bottom: 1.2rem;
+            line-height: 1.8;
+            color: #ccc;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 2rem;
+        }
+        
+        .social-links a {
+            color: white;
+            background: linear-gradient(135deg, #6a5acd, #4a36b0);
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(74, 54, 176, 0.3);
+        }
+        
+        .social-links a:hover {
+            background: linear-gradient(135deg, #a991ff, #6a5acd);
+            transform: translateY(-5px) rotate(5deg);
+            box-shadow: 0 8px 15px rgba(74, 54, 176, 0.4);
+        }
+        
+        .copyright {
+            margin-top: 2.5rem;
+            padding-top: 1.8rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .header-content h1 {
+                font-size: 2.4rem;
+            }
+            
+            .nav-container {
+                flex-wrap: wrap;
+            }
+            
+            .nav-container a {
+                padding: 1rem 1.2rem;
+                font-size: 0.95rem;
+                flex: 1;
+                text-align: center;
+            }
+            /* 媒体导航响应式 */
+            .media-main-nav {
+                max-width: 320px;
+                padding: 20px;
+            }
+            .media-main-nav-container {
+                gap: 10px;
+            }
+            .media-main-nav-container a {
+                padding: 1rem 0.5rem;
+                font-size: 0.85rem;
+            }
+            .player-sub-nav-container a {
+                padding: 0.6rem 1rem;
+                font-size: 0.9rem;
+            }
+            
+            .athlete-name {
+                font-size: 1.9rem;
+            }
+            
+            .media-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .media-img {
+                height: 200px;
+            }
+            
+            .media-video-container {
+                height: 200px;
+            }
+            
+            .media-caption {
+                padding: 0.8rem;
+                font-size: 0.9rem;
+            }
+            
+            .avatar-container {
+                width: 160px;
+                height: 160px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .media-main-nav {
+                max-width: 280px;
+                padding: 15px;
+            }
+            .media-main-nav-container {
+                gap: 8px;
+            }
+            .media-main-nav-container a {
+                padding: 0.8rem 0.3rem;
+                font-size: 0.75rem;
+            }
+            .media-img {
+                height: 180px;
+            }
+            .media-video-container {
+                height: 180px;
+            }
+        }
+        
+        /* 动画效果 */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .athlete-card, .media-section {
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        /* 装饰元素 */
+        .decoration {
+            position: fixed;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(169, 145, 255, 0.1) 0%, rgba(169, 145, 255, 0) 70%);
+            z-index: -1;
+        }
+        
+        .decoration-1 {
+            top: 10%;
+            left: 5%;
+        }
+        
+        .decoration-2 {
+            bottom: 10%;
+            right: 5%;
+        }
+        
+        /* 进入页（答题页）样式 - 浅色 + 动画 */
+        @keyframes entryBgShift {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.92; }
+        }
+        @keyframes entryBoxIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9) translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+        @keyframes entryFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+        @keyframes entryShine {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+        @keyframes entryDot {
+            0%, 100% {
+                transform: translate(0, 0) scale(1);
+                opacity: 0.4;
+            }
+            50% {
+                transform: translate(10px, -15px) scale(1.1);
+                opacity: 0.6;
+            }
+        }
+        @keyframes entryErrorIn {
+            from {
+                opacity: 0;
+                transform: translateY(-5px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes entryLockPulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.08); opacity: 0.85; }
+        }
+        #entry-page {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://ddgymy.dpdns.org/PicGo/shoufu.jpg');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            padding: 20px;
+        }
+        #entry-page::before {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.06) 0%, transparent 70%);
+            top: 10%;
+            left: 15%;
+            animation: entryDot 6s ease-in-out infinite;
+        }
+        #entry-page::after {
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+            bottom: 20%;
+            right: 10%;
+            animation: entryDot 7s ease-in-out infinite 1s;
+        }
+        #entry-page .entry-box {
+            position: relative;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            border-radius: 24px;
+            padding: 3rem;
+            max-width: 420px;
+            width: 100%;
+            box-shadow: 0 25px 60px rgba(140, 120, 180, 0.15), 0 0 0 1px rgba(255, 255, 255, 0.8);
+            text-align: center;
+            animation: entryBoxIn 0.6s ease-out forwards;
+            overflow: hidden;
+        }
+        #entry-page .entry-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(200, 180, 230, 0.15), transparent);
+            animation: entryShine 4s ease-in-out infinite 1s;
+        }
+        #entry-page .entry-box {
+            animation: entryBoxIn 0.6s ease-out forwards, entryFloat 4s ease-in-out infinite 0.8s;
+        }
+        #entry-page h2 {
+            color: #7b6ba8;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+        }
+        #entry-page h2 i {
+            display: inline-block;
+            animation: entryLockPulse 2s ease-in-out infinite;
+        }
+        #entry-page .hint {
+            color: #8a7fa0;
+            font-size: 0.9rem;
+            margin-bottom: 1.2rem;
+        }
+        #entry-page input {
+            width: 100%;
+            padding: 1rem 1.2rem;
+            font-size: 1.1rem;
+            border: 2px solid #e2dcef;
+            border-radius: 14px;
+            margin-bottom: 1rem;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+        }
+        #entry-page input:focus {
+            outline: none;
+            border-color: #a89ad4;
+            box-shadow: 0 0 0 4px rgba(168, 154, 212, 0.2);
+            transform: scale(1.01);
+        }
+        #entry-page .submit-btn {
+            width: 100%;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: white;
+            background: linear-gradient(135deg, #a89ad4 0%, #8b7bb8 100%);
+            border: none;
+            border-radius: 14px;
+            cursor: pointer;
+            transition: all 0.35s ease;
+            box-shadow: 0 6px 20px rgba(139, 123, 184, 0.25);
+        }
+        #entry-page .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 28px rgba(139, 123, 184, 0.35);
+            background: linear-gradient(135deg, #b5a8dc 0%, #9a8ac4 100%);
+        }
+        #entry-page .submit-btn:active {
+            transform: translateY(-1px);
+        }
+        #entry-page .error-msg {
+            color: #b85c5c;
+            font-size: 0.95rem;
+            margin-top: 1rem;
+            display: none;
+        }
+        #entry-page .error-msg.show {
+            display: block;
+            animation: entryErrorIn 0.35s ease-out forwards;
+        }
+        #main-page {
+            display: none;
+        }
+        #main-page.visible {
+            display: block;
+        }
+        
+        * {
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%236a5acd" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 12.74 3 11 3c3.08 0 5.5 2.42 5.5 5.5 0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>') 12 12, auto;
+        }
