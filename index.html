@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>王曼昱 & 林高远 - 中国乒乓球冠军</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI','Microsoft YaHei',sans-serif}body{background-color:#f8f9ff;color:#333;line-height:1.6}@keyframes entryBgShift{0%,100%{opacity:1}50%{opacity:0.92}}@keyframes entryBoxIn{from{opacity:0;transform:scale(0.9) translateY(20px)}to{opacity:1;transform:scale(1) translateY(0)}}@keyframes entryFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}@keyframes entryShine{0%{left:-100%}100%{left:100%}}@keyframes entryDot{0%,100%{transform:translate(0,0) scale(1);opacity:0.4}50%{transform:translate(10px,-15px) scale(1.1);opacity:0.6}}@keyframes entryErrorIn{from{opacity:0;transform:translateY(-5px)}to{opacity:1;transform:translateY(0)}}@keyframes entryLockPulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.08);opacity:0.85}}#entry-page{position:fixed;top:0;left:0;width:100%;height:100%;background-image:url('https://r2.ddgymy.dpdns.org/PicGo/shoufu.webp');background-size:cover;background-position:center center;background-repeat:no-repeat;display:flex;align-items:center;justify-content:center;z-index:9999;padding:20px}#entry-page::before{content:'';position:absolute;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,0.06) 0%,transparent 70%);top:10%;left:15%;animation:entryDot 6s ease-in-out infinite}#entry-page::after{content:'';position:absolute;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,0.05) 0%,transparent 70%);bottom:20%;right:10%;animation:entryDot 7s ease-in-out infinite 1s}#entry-page .entry-box{position:relative;background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border-radius:24px;padding:3rem;max-width:420px;width:100%;box-shadow:0 25px 60px rgba(140,120,180,0.15),0 0 0 1px rgba(255,255,255,0.8);text-align:center;animation:entryBoxIn 0.6s ease-out forwards;overflow:hidden}#entry-page .entry-box::before{content:'';position:absolute;top:0;left:-100%;width:50%;height:100%;background:linear-gradient(90deg,transparent,rgba(200,180,230,0.15),transparent);animation:entryShine 4s ease-in-out infinite 1s}#entry-page .entry-box{animation:entryBoxIn 0.6s ease-out forwards,entryFloat 4s ease-in-out infinite 0.8s}#entry-page h2{color:#7b6ba8;font-size:1.5rem;margin-bottom:1.5rem;line-height:1.5}#entry-page h2 i{display:inline-block;animation:entryLockPulse 2s ease-in-out infinite}#entry-page .hint{color:#8a7fa0;font-size:0.9rem;margin-bottom:1.2rem}#entry-page input{width:100%;padding:1rem 1.2rem;font-size:1.1rem;border:2px solid #e2dcef;border-radius:14px;margin-bottom:1rem;box-sizing:border-box;transition:border-color 0.3s ease,box-shadow 0.3s ease,transform 0.2s ease}#entry-page input:focus{outline:none;border-color:#a89ad4;box-shadow:0 0 0 4px rgba(168,154,212,0.2);transform:scale(1.01)}#entry-page .submit-btn{width:100%;padding:1rem 2rem;font-size:1.1rem;font-weight:600;color:white;background:linear-gradient(135deg,#a89ad4 0%,#8b7bb8 100%);border:none;border-radius:14px;cursor:pointer;transition:all 0.35s ease;box-shadow:0 6px 20px rgba(139,123,184,0.25)}#entry-page .submit-btn:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(139,123,184,0.35);background:linear-gradient(135deg,#b5a8dc 0%,#9a8ac4 100%)}#entry-page .submit-btn:active{transform:translateY(-1px)}#entry-page .error-msg{color:#b85c5c;font-size:0.95rem;margin-top:1rem;display:none}#entry-page .error-msg.show{display:block;animation:entryErrorIn 0.35s ease-out forwards}#main-page{display:none}#main-page.visible{display:block}*{cursor:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%236a5acd" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 12.74 3 11 3c3.08 0 5.5 2.42 5.5 5.5 0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>') 12 12,auto}
+</style>
+<link rel="stylesheet" href="style.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="style.min.css"></noscript>
 </head>
 <body>
     <!-- 进入页：答对问题后进入主站 -->
@@ -51,7 +55,7 @@
         <div class="athlete-card" id="wangmanyu">
             <div class="athlete-header">
                 <div class="avatar-container">
-                    <img src="https://r2.ddgymy.dpdns.org/PicGo/quanyu (11).png" alt="王曼昱" class="avatar-img">
+                    <img loading="lazy" src="https://r2.ddgymy.dpdns.org/PicGo/quanyu (11).png" alt="王曼昱" class="avatar-img">
                 </div>
                 <h2 class="athlete-name">王曼昱</h2>
                 <p class="athlete-title">中国女子乒乓球运动员 | 世界冠军 | 奥运金牌得主</p>
@@ -87,7 +91,7 @@
         <div class="athlete-card" id="lingaoyuan">
             <div class="athlete-header">
                 <div class="avatar-container">
-                    <img src="https://r2.ddgymy.dpdns.org/PicGo/quanyu (6).png" alt="林高远" class="avatar-img">
+                    <img loading="lazy" src="https://r2.ddgymy.dpdns.org/PicGo/quanyu (6).png" alt="林高远" class="avatar-img">
                 </div>
                 <h2 class="athlete-name">林高远</h2>
                 <p class="athlete-title">中国男子乒乓球运动员 | 世界冠军 | 亚洲冠军</p>
@@ -150,40 +154,40 @@
                     <h4 class="player-title">林高远 · 雄安乒超精彩瞬间</h4>
                     <div class="media-grid">
                         <div class="media-item">
-                            <img src="https://r2.ddgymy.dpdns.org/PicGo/xiongan (1).JPG" alt="林高远雄安乒超比赛" class="media-img">
+                            <img loading="lazy" src="https://r2.ddgymy.dpdns.org/PicGo/xiongan (1).JPG" alt="林高远雄安乒超比赛" class="media-img">
                             <div class="media-caption"></div>
                         </div>
                         <div class="media-item">
-                            <img src="https://r2.ddgymy.dpdns.org/PicGo/xiongan (4).JPG" alt="林高远雄安乒超比赛" class="media-img">
+                            <img loading="lazy" src="https://r2.ddgymy.dpdns.org/PicGo/xiongan (4).JPG" alt="林高远雄安乒超比赛" class="media-img">
                             <div class="media-caption"></div>
                         </div>
                         <div class="media-item">
-                            <img src="https://r2.ddgymy.dpdns.org/PicGo/xiongan (6).JPG" alt="林高远雄安乒超比赛" class="media-img">
+                            <img loading="lazy" src="https://r2.ddgymy.dpdns.org/PicGo/xiongan (6).JPG" alt="林高远雄安乒超比赛" class="media-img">
                             <div class="media-caption"></div>
                         </div>
                         <div class="media-item">
-                            <img src="https://r2.ddgymy.dpdns.org/PicGo/xiongan (7).JPG" alt="林高远雄安乒超比赛" class="media-img">
+                            <img loading="lazy" src="https://r2.ddgymy.dpdns.org/PicGo/xiongan (7).JPG" alt="林高远雄安乒超比赛" class="media-img">
                             <div class="media-caption"></div>
                         </div>
                         <div class="media-item">
-                            <img src="https://r2.ddgymy.dpdns.org/PicGo/xiongan (11).JPG" alt="林高远雄安乒超比赛" class="media-img">
+                            <img loading="lazy" src="https://r2.ddgymy.dpdns.org/PicGo/xiongan (11).JPG" alt="林高远雄安乒超比赛" class="media-img">
                             <div class="media-caption"></div>
                         </div>
                         <div class="media-item">
-                            <img src="https://r2.ddgymy.dpdns.org/PicGo/xiongan (14).JPG" alt="林高远雄安乒超比赛" class="media-img">
+                            <img loading="lazy" src="https://r2.ddgymy.dpdns.org/PicGo/xiongan (14).JPG" alt="林高远雄安乒超比赛" class="media-img">
                             <div class="media-caption"></div>
                         </div>
                         <div class="media-item">
-                            <img src="https://r2.ddgymy.dpdns.org/PicGo/xiongan (16).JPG" alt="林高远雄安乒超比赛" class="media-img">
+                            <img loading="lazy" src="https://r2.ddgymy.dpdns.org/PicGo/xiongan (16).JPG" alt="林高远雄安乒超比赛" class="media-img">
                             <div class="media-caption"></div>
                         </div>
                         <div class="media-item">
-                            <img src="https://r2.ddgymy.dpdns.org/PicGo/xiongan (17).JPG" alt="林高远雄安乒超比赛" class="media-img">
+                            <img loading="lazy" src="https://r2.ddgymy.dpdns.org/PicGo/xiongan (17).JPG" alt="林高远雄安乒超比赛" class="media-img">
                             <div class="media-caption"></div>
                         </div>
                         <div class="media-item">
                             <div class="media-video-container">
-                                <video class="media-video" controls width="640" height="360">
+                                <video preload="none" class="media-video" controls width="640" height="360">
                                     <source src="https://pic2.fukit.cn/autoupload/NoncDMNg3z1O9LyMPXdoT7KXl_QqVl-bpSwqP4fJO68/20260203/39OA/xiongan%281%29.MOV" type="video/mp4">
                                     <p>您的浏览器不支持播放，请下载查看</p>
                                 </video>
@@ -192,7 +196,7 @@
                         </div>
                         <div class="media-item">
                             <div class="media-video-container">
-                                <video class="media-video" controls width="640" height="360">
+                                <video preload="none" class="media-video" controls width="640" height="360">
                                     <source src="https://pic2.fukit.cn/autoupload/NoncDMNg3z1O9LyMPXdoT7KXl_QqVl-bpSwqP4fJO68/20260203/p2cx/xiongan%282%29.MOV" type="video/mp4">
                                     <p>您的浏览器不支持播放，请下载查看</p>
                                 </video>
@@ -207,23 +211,23 @@
                     <h4 class="player-title">王曼昱 · 雄安乒超精彩瞬间</h4>
                     <div class="media-grid">
                         <div class="media-item">
-                            <img src="https://r2.ddgymy.dpdns.org/PicGo/xiongan (8).JPG" alt="王曼昱雄安乒超比赛" class="media-img">
+                            <img loading="lazy" src="https://r2.ddgymy.dpdns.org/PicGo/xiongan (8).JPG" alt="王曼昱雄安乒超比赛" class="media-img">
                             <div class="media-caption"></div>
                         </div>
                         <div class="media-item">
-                            <img src="https://r2.ddgymy.dpdns.org/PicGo/xiongan (9).JPG" alt="王曼昱雄安乒超比赛" class="media-img">
+                            <img loading="lazy" src="https://r2.ddgymy.dpdns.org/PicGo/xiongan (9).JPG" alt="王曼昱雄安乒超比赛" class="media-img">
                             <div class="media-caption"></div>
                         </div>
                         <div class="media-item">
-                            <img src="https://r2.ddgymy.dpdns.org/PicGo/xiongan (10).JPG" alt="王曼昱雄安乒超比赛" class="media-img">
+                            <img loading="lazy" src="https://r2.ddgymy.dpdns.org/PicGo/xiongan (10).JPG" alt="王曼昱雄安乒超比赛" class="media-img">
                             <div class="media-caption"></div>
                         </div>
                         <div class="media-item">
-                            <img src="https://r2.ddgymy.dpdns.org/PicGo/xiongan (12).JPG" alt="王曼昱雄安乒超比赛" class="media-img">
+                            <img loading="lazy" src="https://r2.ddgymy.dpdns.org/PicGo/xiongan (12).JPG" alt="王曼昱雄安乒超比赛" class="media-img">
                             <div class="media-caption"></div>
                         </div>
                         <div class="media-item">
-                            <img src="https://r2.ddgymy.dpdns.org/PicGo/xiongan (13).JPG" alt="王曼昱雄安乒超比赛" class="media-img">
+                            <img loading="lazy" src="https://r2.ddgymy.dpdns.org/PicGo/xiongan (13).JPG" alt="王曼昱雄安乒超比赛" class="media-img">
                             <div class="media-caption"></div>
                         </div>
                     </div>
@@ -246,44 +250,44 @@
                     <h4 class="player-title">林高远 · 厦门乒超精彩瞬间</h4>
                     <div class="media-grid">
                         <div class="media-item">
-                            <img src="https://r2.ddgymy.dpdns.org/PicGo/xiamen (3).JPG" alt="林高远厦门乒超比赛" class="media-img">
+                            <img loading="lazy" src="https://r2.ddgymy.dpdns.org/PicGo/xiamen (3).JPG" alt="林高远厦门乒超比赛" class="media-img">
                             <div class="media-caption"></div>
                         </div>
                         <div class="media-item">
-                            <img src="https://r2.ddgymy.dpdns.org/PicGo/xiamen (4).jpg" alt="林高远厦门乒超比赛" class="media-img">
+                            <img loading="lazy" src="https://r2.ddgymy.dpdns.org/PicGo/xiamen (4).jpg" alt="林高远厦门乒超比赛" class="media-img">
                             <div class="media-caption"></div>
                         </div>
                         <div class="media-item">
-                            <img src="https://r2.ddgymy.dpdns.org/PicGo/xiamen (6).JPG" alt="林高远厦门乒超比赛" class="media-img">
+                            <img loading="lazy" src="https://r2.ddgymy.dpdns.org/PicGo/xiamen (6).JPG" alt="林高远厦门乒超比赛" class="media-img">
                             <div class="media-caption"></div>
                         </div>
                         <div class="media-item">
-                            <img src="https://r2.ddgymy.dpdns.org/PicGo/xiamen (7).JPG" alt="林高远厦门乒超比赛" class="media-img">
+                            <img loading="lazy" src="https://r2.ddgymy.dpdns.org/PicGo/xiamen (7).JPG" alt="林高远厦门乒超比赛" class="media-img">
                             <div class="media-caption"></div>
                         </div>
                         <div class="media-item">
-                            <img src="https://r2.ddgymy.dpdns.org/PicGo/xiamen (9).JPG" alt="林高远厦门乒超比赛" class="media-img">
+                            <img loading="lazy" src="https://r2.ddgymy.dpdns.org/PicGo/xiamen (9).JPG" alt="林高远厦门乒超比赛" class="media-img">
                             <div class="media-caption"></div>
                         </div>
                         <div class="media-item">
-                            <img src="https://r2.ddgymy.dpdns.org/PicGo/xiamen (12).JPG" alt="林高远厦门乒超比赛" class="media-img">
+                            <img loading="lazy" src="https://r2.ddgymy.dpdns.org/PicGo/xiamen (12).JPG" alt="林高远厦门乒超比赛" class="media-img">
                             <div class="media-caption"></div>
                         </div>
                         <div class="media-item">
-                            <img src="https://r2.ddgymy.dpdns.org/PicGo/xiamen (23).JPG" alt="林高远厦门乒超比赛" class="media-img">
+                            <img loading="lazy" src="https://r2.ddgymy.dpdns.org/PicGo/xiamen (23).JPG" alt="林高远厦门乒超比赛" class="media-img">
                             <div class="media-caption"></div>
                         </div>
                         <div class="media-item">
-                            <img src="https://r2.ddgymy.dpdns.org/PicGo/xiamen (26).JPG" alt="林高远厦门乒超比赛" class="media-img">
+                            <img loading="lazy" src="https://r2.ddgymy.dpdns.org/PicGo/xiamen (26).JPG" alt="林高远厦门乒超比赛" class="media-img">
                             <div class="media-caption"></div>
                         </div>
                         <div class="media-item">
-                            <img src="https://r2.ddgymy.dpdns.org/PicGo/xiamen (28).JPG" alt="林高远厦门乒超比赛" class="media-img">
+                            <img loading="lazy" src="https://r2.ddgymy.dpdns.org/PicGo/xiamen (28).JPG" alt="林高远厦门乒超比赛" class="media-img">
                             <div class="media-caption"></div>
                         </div>
                         <div class="media-item">
                             <div class="media-video-container">
-                                <video class="media-video" controls width="640" height="360">
+                                <video preload="none" class="media-video" controls width="640" height="360">
                                     <source src="https://pic2.fukit.cn/autoupload/NoncDMNg3z1O9LyMPXdoT7KXl_QqVl-bpSwqP4fJO68/20260203/Lpo8/xiamen_%281%29.mp4" type="video/mp4">
                                     <p>您的浏览器不支持播放，请下载查看</p>
                                 </video>
@@ -292,7 +296,7 @@
                         </div>
                         <div class="media-item">
                             <div class="media-video-container">
-                                <video class="media-video" controls width="640" height="360">
+                                <video preload="none" class="media-video" controls width="640" height="360">
                                     <source src="https://pic2.fukit.cn/autoupload/NoncDMNg3z1O9LyMPXdoT7KXl_QqVl-bpSwqP4fJO68/20260203/0BMy/xiamen_%283%29.MP4" type="video/mp4">
                                     <p>您的浏览器不支持播放，请下载查看</p>
                                 </video>
@@ -301,7 +305,7 @@
                         </div>
                         <div class="media-item">
                             <div class="media-video-container">
-                                <video class="media-video" controls width="640" height="360">
+                                <video preload="none" class="media-video" controls width="640" height="360">
                                     <source src="https://pic2.fukit.cn/autoupload/NoncDMNg3z1O9LyMPXdoT7KXl_QqVl-bpSwqP4fJO68/20260203/Vt6L/xiamen_%285%29.MP4" type="video/mp4">
                                     <p>您的浏览器不支持播放，请下载查看</p>
                                 </video>
@@ -310,7 +314,7 @@
                         </div>
                         <div class="media-item">
                             <div class="media-video-container">
-                                <video class="media-video" controls width="640" height="360">
+                                <video preload="none" class="media-video" controls width="640" height="360">
                                     <source src="https://pic2.fukit.cn/autoupload/NoncDMNg3z1O9LyMPXdoT7KXl_QqVl-bpSwqP4fJO68/20260203/Rpm5/xiamen_%288%29.MP4" type="video/mp4">
                                     <p>您的浏览器不支持播放，请下载查看</p>
                                 </video>
@@ -319,7 +323,7 @@
                         </div>
                         <div class="media-item">
                             <div class="media-video-container">
-                                <video class="media-video" controls width="640" height="360">
+                                <video preload="none" class="media-video" controls width="640" height="360">
                                     <source src="https://pic2.fukit.cn/autoupload/NoncDMNg3z1O9LyMPXdoT7KXl_QqVl-bpSwqP4fJO68/20260203/1uE8/xiamen_%2811%29.MP4" type="video/mp4">
                                     <p>您的浏览器不支持播放，请下载查看</p>
                                 </video>
@@ -328,7 +332,7 @@
                         </div>
                         <div class="media-item">
                             <div class="media-video-container">
-                                <video class="media-video" controls width="640" height="360">
+                                <video preload="none" class="media-video" controls width="640" height="360">
                                     <source src="https://pic2.fukit.cn/autoupload/NoncDMNg3z1O9LyMPXdoT7KXl_QqVl-bpSwqP4fJO68/20260203/vRfX/xiamen_%2812%29.MP4" type="video/mp4">
                                     <p>您的浏览器不支持播放，请下载查看</p>
                                 </video>
@@ -337,7 +341,7 @@
                         </div>
                         <div class="media-item">
                             <div class="media-video-container">
-                                <video class="media-video" controls width="640" height="360">
+                                <video preload="none" class="media-video" controls width="640" height="360">
                                     <source src="https://pic2.fukit.cn/autoupload/NoncDMNg3z1O9LyMPXdoT7KXl_QqVl-bpSwqP4fJO68/20260203/fK9g/xiamen_%2815%29.MP4" type="video/mp4">
                                     <p>您的浏览器不支持播放，请下载查看</p>                                
                                 </video>
@@ -346,7 +350,7 @@
                         </div>
                         <div class="media-item">
                             <div class="media-video-container">
-                                <video class="media-video" controls width="640" height="360">
+                                <video preload="none" class="media-video" controls width="640" height="360">
                                     <source src="https://pic2.fukit.cn/autoupload/NoncDMNg3z1O9LyMPXdoT7KXl_QqVl-bpSwqP4fJO68/20260203/O2pj/xiamen_%2816%29.MP4" type="video/mp4">
                                     <p>您的浏览器不支持播放，请下载查看</p>
                                 </video>
@@ -361,44 +365,44 @@
                     <h4 class="player-title">王曼昱 · 厦门乒超精彩瞬间</h4>
                     <div class="media-grid">
                         <div class="media-item">
-                            <img src="https://r2.ddgymy.dpdns.org/PicGo/xiamen (1).JPG" alt="王曼昱厦门乒超比赛" class="media-img">
+                            <img loading="lazy" src="https://r2.ddgymy.dpdns.org/PicGo/xiamen (1).JPG" alt="王曼昱厦门乒超比赛" class="media-img">
                             <div class="media-caption"></div>
                         </div>
                         <div class="media-item">
-                            <img src="https://r2.ddgymy.dpdns.org/PicGo/xiamen (13).JPG" alt="王曼昱厦门乒超比赛" class="media-img">
+                            <img loading="lazy" src="https://r2.ddgymy.dpdns.org/PicGo/xiamen (13).JPG" alt="王曼昱厦门乒超比赛" class="media-img">
                             <div class="media-caption"></div>
                         </div>
                         <div class="media-item">
-                            <img src="https://r2.ddgymy.dpdns.org/PicGo/xiamen (14).JPG" alt="王曼昱厦门乒超比赛" class="media-img">
+                            <img loading="lazy" src="https://r2.ddgymy.dpdns.org/PicGo/xiamen (14).JPG" alt="王曼昱厦门乒超比赛" class="media-img">
                             <div class="media-caption"></div>
                         </div>
                         <div class="media-item">
-                            <img src="https://r2.ddgymy.dpdns.org/PicGo/xiamen (15).JPG" alt="王曼昱厦门乒超比赛" class="media-img">
+                            <img loading="lazy" src="https://r2.ddgymy.dpdns.org/PicGo/xiamen (15).JPG" alt="王曼昱厦门乒超比赛" class="media-img">
                             <div class="media-caption"></div>
                         </div>
                         <div class="media-item">
-                            <img src="https://r2.ddgymy.dpdns.org/PicGo/xiamen (16).JPG" alt="王曼昱厦门乒超比赛" class="media-img">
+                            <img loading="lazy" src="https://r2.ddgymy.dpdns.org/PicGo/xiamen (16).JPG" alt="王曼昱厦门乒超比赛" class="media-img">
                             <div class="media-caption"></div>
                         </div>
                         <div class="media-item">
-                            <img src="https://r2.ddgymy.dpdns.org/PicGo/xiamen (17).JPG" alt="王曼昱厦门乒超比赛" class="media-img">
+                            <img loading="lazy" src="https://r2.ddgymy.dpdns.org/PicGo/xiamen (17).JPG" alt="王曼昱厦门乒超比赛" class="media-img">
                             <div class="media-caption"></div>
                         </div>
                         <div class="media-item">
-                            <img src="https://r2.ddgymy.dpdns.org/PicGo/xiamen (19).JPG" alt="王曼昱厦门乒超比赛" class="media-img">
+                            <img loading="lazy" src="https://r2.ddgymy.dpdns.org/PicGo/xiamen (19).JPG" alt="王曼昱厦门乒超比赛" class="media-img">
                             <div class="media-caption"></div>
                         </div>
                         <div class="media-item">
-                            <img src="https://r2.ddgymy.dpdns.org/PicGo/xiamen (21).JPG" alt="王曼昱厦门乒超比赛" class="media-img">
+                            <img loading="lazy" src="https://r2.ddgymy.dpdns.org/PicGo/xiamen (21).JPG" alt="王曼昱厦门乒超比赛" class="media-img">
                             <div class="media-caption"></div>
                         </div>
                         <div class="media-item">
-                            <img src="https://r2.ddgymy.dpdns.org/PicGo/xiamen (29).jpg" alt="王曼昱厦门乒超比赛" class="media-img">
+                            <img loading="lazy" src="https://r2.ddgymy.dpdns.org/PicGo/xiamen (29).jpg" alt="王曼昱厦门乒超比赛" class="media-img">
                             <div class="media-caption"></div>
                         </div>
                         <div class="media-item">
                             <div class="media-video-container">
-                                <video class="media-video" controls width="640" height="360">
+                                <video preload="none" class="media-video" controls width="640" height="360">
                                     <source src="https://pic2.fukit.cn/autoupload/NoncDMNg3z1O9LyMPXdoT7KXl_QqVl-bpSwqP4fJO68/20260204/DOgo/IMG_9707.MOV" type="video/mp4">
                                     <p>您的浏览器不支持播放，请下载查看</p>
                                 </video>
@@ -407,7 +411,7 @@
                         </div>
                         <div class="media-item">
                             <div class="media-video-container">
-                                <video class="media-video" controls width="640" height="360">
+                                <video preload="none" class="media-video" controls width="640" height="360">
                                     <source src="https://pic2.fukit.cn/autoupload/NoncDMNg3z1O9LyMPXdoT7KXl_QqVl-bpSwqP4fJO68/20260203/xSP2/xiamen_%286%29.MP4" type="video/mp4">
                                     <p>您的浏览器不支持播放，请下载查看</p>
                                 </video>
@@ -416,7 +420,7 @@
                         </div>
                         <div class="media-item">
                             <div class="media-video-container">
-                                <video class="media-video" controls width="640" height="360">
+                                <video preload="none" class="media-video" controls width="640" height="360">
                                     <source src="https://pic2.fukit.cn/autoupload/NoncDMNg3z1O9LyMPXdoT7KXl_QqVl-bpSwqP4fJO68/20260203/mGvu/xiamen_%287%29.MP4" type="video/mp4">
                                     <p>您的浏览器不支持播放，请下载查看</p>
                                 </video>
@@ -425,7 +429,7 @@
                         </div>
                         <div class="media-item">
                             <div class="media-video-container">
-                                <video class="media-video" controls width="640" height="360">
+                                <video preload="none" class="media-video" controls width="640" height="360">
                                     <source src="https://pic2.fukit.cn/autoupload/NoncDMNg3z1O9LyMPXdoT7KXl_QqVl-bpSwqP4fJO68/20260203/4sIi/xiamen_%289%29.MP4" type="video/mp4">
                                     <p>您的浏览器不支持播放，请下载查看</p>
                                 </video>
@@ -434,7 +438,7 @@
                         </div>
                         <div class="media-item">
                             <div class="media-video-container">
-                                <video class="media-video" controls width="640" height="360">
+                                <video preload="none" class="media-video" controls width="640" height="360">
                                     <source src="https://pic2.fukit.cn/autoupload/NoncDMNg3z1O9LyMPXdoT7KXl_QqVl-bpSwqP4fJO68/20260203/NxeJ/xiamen_%2810%29.mp4" type="video/mp4">
                                     <p>您的浏览器不支持播放，请下载查看</p>
                                 </video>
@@ -443,7 +447,7 @@
                         </div>
                         <div class="media-item">
                             <div class="media-video-container">
-                                <video class="media-video" controls width="640" height="360">
+                                <video preload="none" class="media-video" controls width="640" height="360">
                                     <source src="https://pic2.fukit.cn/autoupload/NoncDMNg3z1O9LyMPXdoT7KXl_QqVl-bpSwqP4fJO68/20260203/9S2B/xiamen%282%29.MOV" type="video/mp4">
                                     <p>您的浏览器不支持播放，请下载查看</p>
                                 </video>
@@ -452,7 +456,7 @@
                         </div>
                         <div class="media-item">
                             <div class="media-video-container">
-                                <video class="media-video" controls width="640" height="360">
+                                <video preload="none" class="media-video" controls width="640" height="360">
                                     <source src="https://pic2.fukit.cn/autoupload/NoncDMNg3z1O9LyMPXdoT7KXl_QqVl-bpSwqP4fJO68/20260203/T8FL/xiamen_%2814%29.MP4" type="video/mp4">
                                     <p>您的浏览器不支持播放，请下载查看</p>
                                 </video>
@@ -461,7 +465,7 @@
                         </div>
                         <div class="media-item">
                             <div class="media-video-container">
-                                <video class="media-video" controls width="640" height="360">
+                                <video preload="none" class="media-video" controls width="640" height="360">
                                     <source src="https://pic2.fukit.cn/autoupload/NoncDMNg3z1O9LyMPXdoT7KXl_QqVl-bpSwqP4fJO68/20260203/RZ4x/xiamen_%2817%29.mp4" type="video/mp4">
                                     <p>您的浏览器不支持播放，请下载查看</p>
                                 </video>
@@ -488,36 +492,36 @@
                     <h4 class="player-title">林高远 · 全运会精彩瞬间</h4>
                     <div class="media-grid">
                         <div class="media-item">
-                            <img src="https://r2.ddgymy.dpdns.org/PicGo/quanyu (1).GIF" alt="林高远全运会混双" class="media-img">
+                            <img loading="lazy" src="https://r2.ddgymy.dpdns.org/PicGo/quanyu (1).GIF" alt="林高远全运会混双" class="media-img">
                             <div class="media-caption"></div>
                         </div>
                         <div class="media-item">
-                            <img src="https://r2.ddgymy.dpdns.org/PicGo/quanyu (1).JPG" alt="林高远全运会混双" class="media-img">
+                            <img loading="lazy" src="https://r2.ddgymy.dpdns.org/PicGo/quanyu (1).JPG" alt="林高远全运会混双" class="media-img">
                             <div class="media-caption"></div>
                         </div>
                         <div class="media-item">
-                            <img src="https://r2.ddgymy.dpdns.org/PicGo/quanyu (13).png" alt="林高远全运会混双" class="media-img">
+                            <img loading="lazy" src="https://r2.ddgymy.dpdns.org/PicGo/quanyu (13).png" alt="林高远全运会混双" class="media-img">
                             <div class="media-caption"></div>
                         </div>
                         <div class="media-item">
-                            <img src="https://r2.ddgymy.dpdns.org/PicGo/quanyu (10).png" alt="林高远全运会混双" class="media-img">
+                            <img loading="lazy" src="https://r2.ddgymy.dpdns.org/PicGo/quanyu (10).png" alt="林高远全运会混双" class="media-img">
                             <div class="media-caption"></div>
                         </div>
                         <div class="media-item">
-                            <img src="https://r2.ddgymy.dpdns.org/PicGo/quanyu (8).png" alt="林高远全运会混双" class="media-img">
+                            <img loading="lazy" src="https://r2.ddgymy.dpdns.org/PicGo/quanyu (8).png" alt="林高远全运会混双" class="media-img">
                             <div class="media-caption"></div>
                         </div>
                         <div class="media-item">
-                            <img src="https://r2.ddgymy.dpdns.org/PicGo/quanyu (7).png" alt="林高远全运会混双" class="media-img">
+                            <img loading="lazy" src="https://r2.ddgymy.dpdns.org/PicGo/quanyu (7).png" alt="林高远全运会混双" class="media-img">
                             <div class="media-caption"></div>
                         </div>
                         <div class="media-item">
-                            <img src="https://r2.ddgymy.dpdns.org/PicGo/qy (1).JPG" alt="林高远全运会混双" class="media-img">
+                            <img loading="lazy" src="https://r2.ddgymy.dpdns.org/PicGo/qy (1).JPG" alt="林高远全运会混双" class="media-img">
                             <div class="media-caption"></div>
                         </div>
                         <div class="media-item">
                             <div class="media-video-container">
-                                <video class="media-video" controls poster="https://r2.ddgymy.dpdns.org/PicGo/quanyu (2).PNG">
+                                <video preload="none" class="media-video" controls poster="https://r2.ddgymy.dpdns.org/PicGo/quanyu (2).PNG">
                                     <source src="https://pic2.fukit.cn/autoupload/NoncDMNg3z1O9LyMPXdoT7KXl_QqVl-bpSwqP4fJO68/20260203/3UZa/quanyu_%288%29.MP4" type="video/mp4">
                                     <p>您的浏览器不支持播放，请下载查看</p>
                                 </video>
@@ -526,7 +530,7 @@
                         </div>
                         <div class="media-item">
                             <div class="media-video-container">
-                                <video class="media-video" controls poster="https://r2.ddgymy.dpdns.org/PicGo/qy (3).JPG">
+                                <video preload="none" class="media-video" controls poster="https://r2.ddgymy.dpdns.org/PicGo/qy (3).JPG">
                                     <source src="https://pic2.fukit.cn/autoupload/NoncDMNg3z1O9LyMPXdoT7KXl_QqVl-bpSwqP4fJO68/20260203/SlKK/quanyu%285%29.MOV" type="video/mp4">
                                     <p>您的浏览器不支持播放，请下载查看</p>
                                 </video>
@@ -535,7 +539,7 @@
                         </div>
                         <div class="media-item">
                             <div class="media-video-container">
-                                <video class="media-video" controls poster="https://r2.ddgymy.dpdns.org/PicGo/qy (5).JPG">
+                                <video preload="none" class="media-video" controls poster="https://r2.ddgymy.dpdns.org/PicGo/qy (5).JPG">
                                     <source src="https://pic2.fukit.cn/autoupload/NoncDMNg3z1O9LyMPXdoT7KXl_QqVl-bpSwqP4fJO68/20260203/ol3p/quanyu_%284%29.MP4" type="video/mp4">
                                     <p>您的浏览器不支持播放，请下载查看</p>
                                 </video>
@@ -544,7 +548,7 @@
                         </div>
                         <div class="media-item">
                             <div class="media-video-container">
-                                <video class="media-video" controls width="640" height="360">
+                                <video preload="none" class="media-video" controls width="640" height="360">
                                     <source src="https://pic2.fukit.cn/autoupload/NoncDMNg3z1O9LyMPXdoT7KXl_QqVl-bpSwqP4fJO68/20260203/SuDT/quanyu_%282%29.mp4" type="video/mp4">
                                     <p>您的浏览器不支持播放，请下载查看</p>
                                 </video>
@@ -560,36 +564,36 @@
                     <h4 class="player-title">王曼昱 · 全运会精彩瞬间</h4>
                     <div class="media-grid">
                         <div class="media-item">
-                            <img src="https://r2.ddgymy.dpdns.org/PicGo/quanyun(6).GIF" alt="王曼昱全运会女单" class="media-img">
+                            <img loading="lazy" src="https://r2.ddgymy.dpdns.org/PicGo/quanyun(6).GIF" alt="王曼昱全运会女单" class="media-img">
                             <div class="media-caption"></div>
                         </div>
                         <div class="media-item">
-                            <img src="https://r2.ddgymy.dpdns.org/PicGo/quanyu (2).GIF" alt="王曼昱全运会女单" class="media-img">
+                            <img loading="lazy" src="https://r2.ddgymy.dpdns.org/PicGo/quanyu (2).GIF" alt="王曼昱全运会女单" class="media-img">
                             <div class="media-caption"></div>
                         </div>
                         <div class="media-item">
-                            <img src="https://r2.ddgymy.dpdns.org/PicGo/quanyun(7).GIF" alt="王曼昱全运会女单" class="media-img">
+                            <img loading="lazy" src="https://r2.ddgymy.dpdns.org/PicGo/quanyun(7).GIF" alt="王曼昱全运会女单" class="media-img">
                             <div class="media-caption"></div>
                         </div>
                         <div class="media-item">
-                            <img src="https://r2.ddgymy.dpdns.org/PicGo/quanyun(8).GIF" alt="王曼昱全运会女单" class="media-img">
+                            <img loading="lazy" src="https://r2.ddgymy.dpdns.org/PicGo/quanyun(8).GIF" alt="王曼昱全运会女单" class="media-img">
                             <div class="media-caption"></div>
                         </div>
                         <div class="media-item">
-                            <img src="https://r2.ddgymy.dpdns.org/PicGo/quanyun(9).GIF" alt="王曼昱全运会女单" class="media-img">
+                            <img loading="lazy" src="https://r2.ddgymy.dpdns.org/PicGo/quanyun(9).GIF" alt="王曼昱全运会女单" class="media-img">
                             <div class="media-caption"></div>
                         </div>
                         <div class="media-item">
-                            <img src="https://r2.ddgymy.dpdns.org/PicGo/quanyu (14).png" alt="王曼昱全运会女单" class="media-img">
+                            <img loading="lazy" src="https://r2.ddgymy.dpdns.org/PicGo/quanyu (14).png" alt="王曼昱全运会女单" class="media-img">
                             <div class="media-caption"></div>
                         </div>
                         <div class="media-item">
-                            <img src="https://r2.ddgymy.dpdns.org/PicGo/quanyu (12).png" alt="王曼昱全运会女单" class="media-img">
+                            <img loading="lazy" src="https://r2.ddgymy.dpdns.org/PicGo/quanyu (12).png" alt="王曼昱全运会女单" class="media-img">
                             <div class="media-caption"></div>
                         </div>
                         <div class="media-item">
                             <div class="media-video-container">
-                                <video class="media-video" controls poster="https://r2.ddgymy.dpdns.org/PicGo/quanyu (4).JPG">
+                                <video preload="none" class="media-video" controls poster="https://r2.ddgymy.dpdns.org/PicGo/quanyu (4).JPG">
                                     <source src="https://pic2.fukit.cn/autoupload/NoncDMNg3z1O9LyMPXdoT7KXl_QqVl-bpSwqP4fJO68/20260203/7syY/quanyu_%2814%29.mp4" type="video/mp4">
                                     <p>您的浏览器不支持播放，请下载查看</p>
                                 </video>
@@ -598,7 +602,7 @@
                         </div>
                         <div class="media-item">
                             <div class="media-video-container">
-                                <video class="media-video" controls poster="https://r2.ddgymy.dpdns.org/PicGo/qy(9).JPG">
+                                <video preload="none" class="media-video" controls poster="https://r2.ddgymy.dpdns.org/PicGo/qy(9).JPG">
                                     <source src="https://pic2.fukit.cn/autoupload/NoncDMNg3z1O9LyMPXdoT7KXl_QqVl-bpSwqP4fJO68/20260203/UEf2/quanyu_%2815%29.mp4" type="video/mp4">
                                     <p>您的浏览器不支持播放，请下载查看</p>
                                 </video>
@@ -607,7 +611,7 @@
                         </div>
                         <div class="media-item">
                             <div class="media-video-container">
-                                <video class="media-video" controls poster="https://r2.ddgymy.dpdns.org/PicGo/qy(8).JPG">
+                                <video preload="none" class="media-video" controls poster="https://r2.ddgymy.dpdns.org/PicGo/qy(8).JPG">
                                     <source src="https://pic2.fukit.cn/autoupload/NoncDMNg3z1O9LyMPXdoT7KXl_QqVl-bpSwqP4fJO68/20260203/MNAt/quanyu_%2816%29.mp4" type="video/mp4">
                                     <p>您的浏览器不支持播放，请下载查看</p>
                                 </video>
@@ -616,7 +620,7 @@
                         </div>
                         <div class="media-item">
                             <div class="media-video-container">
-                                <video class="media-video" controls poster="https://r2.ddgymy.dpdns.org/PicGo/qy(7).JPG">
+                                <video preload="none" class="media-video" controls poster="https://r2.ddgymy.dpdns.org/PicGo/qy(7).JPG">
                                     <source src="https://pic2.fukit.cn/autoupload/NoncDMNg3z1O9LyMPXdoT7KXl_QqVl-bpSwqP4fJO68/20260203/FBIo/quanyu_%2813%29.mp4" type="video/mp4">
                                     <p>您的浏览器不支持播放，请下载查看</p>
                                 </video>
@@ -625,8 +629,8 @@
                         </div>
                         <div class="media-item">
                             <div class="media-video-container">
-                                <video class="media-video" controls poster="https://r2.ddgymy.dpdns.org/PicGo/quanyun.JPG">
-                                    <source src="https://pic2.fukit.cn/autoupload/NoncDMNg3z1O9LyMPXdoT7KXl_QqVl-bpSwqP4fJO68/20260203/xzUy/quanyu_%2818%29.mp4" type="video/mp4">
+                                <video preload="none" class="media-video" controls poster="https://r2.ddgymy.dpdns.org/PicGo/quanyun.JPG">
+                                    <source src="https://pic2.fukit.cn/autoupload/NoncDMNg3z1O9LyMPXdoT7KXl_QqVl-bpSwqP4fJO68/20260204/COWw/quanyun.mp4" type="video/mp4">
                                     <p>您的浏览器不支持播放，请下载查看</p>
                                 </video>
                             </div>
@@ -641,11 +645,11 @@
                 <h3 class="event-title">圆满组合</h3>
                 <div class="media-grid">
                     <div class="media-item">
-                        <img src="https://r2.ddgymy.dpdns.org/PicGo/quanyu (16).png" alt="圆满组合领奖" class="media-img">
+                        <img loading="lazy" src="https://r2.ddgymy.dpdns.org/PicGo/quanyu (16).png" alt="圆满组合领奖" class="media-img">
                         <div class="media-caption"></div>
                     </div>                 
                     <div class="media-item">
-                            <video class="media-video" controls poster="https://r2.ddgymy.dpdns.org/PicGo/quanyu (1).PNG" style="width:100%;height:220px;object-fit:cover;">
+                            <video preload="none" class="media-video" controls poster="https://r2.ddgymy.dpdns.org/PicGo/quanyu (1).PNG" style="width:100%;height:220px;object-fit:cover;">
                                 <source src="https://pic2.fukit.cn/autoupload/NoncDMNg3z1O9LyMPXdoT7KXl_QqVl-bpSwqP4fJO68/20260203/ESrP/quanyun%281%29.mp4" type="video/mp4">
                                 <p>您的浏览器不支持播放，请下载查看</p>
                             </video>
@@ -684,6 +688,6 @@
     </footer>
     </div><!-- /#main-page -->
     
-    <script src="script.js"></script>
+    <script src="script.min.js"></script>
 </body>
 </html>
