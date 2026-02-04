@@ -131,6 +131,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var submitBtn = document.getElementById('entry-submit');
     var errorMsg = document.getElementById('entry-error');
     var correctAnswer = '2025.3.19';
+    var alternateAnswer = '2025.2.9'; // Allow the date from the hint
     var bgm = document.getElementById('entry-bgm');
     
     if (bgm) {
@@ -144,16 +145,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function normalizeAnswer(val) {
         if (!val) return '';
-        return String(val).trim()
+        var str = String(val).trim()
             .replace(/[年\/\-]/g, '.')
             .replace(/月|日/g, '.')
             .replace(/\.+/g, '.')
             .replace(/^\.|\.$/g, '');
+        // Remove leading zeros from segments
+        return str.split('.').map(function(s) { return String(parseInt(s, 10)); }).join('.');
     }
 
     function checkAndEnter() {
         var userAnswer = normalizeAnswer(answerInput.value);
-        if (userAnswer === correctAnswer) {
+        if (userAnswer === correctAnswer || userAnswer === alternateAnswer) {
             errorMsg.classList.remove('show');
             entryPage.style.display = 'none';
             mainPage.classList.add('visible');
